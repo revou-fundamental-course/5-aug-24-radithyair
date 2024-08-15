@@ -146,7 +146,7 @@ input, textarea {
     margin-top: 50px;
 }
 
-#hasil {
+#result {
     text-align: center;
     color: var(--field);
     background-color: var(--secondary);
@@ -155,8 +155,9 @@ input, textarea {
     margin: 35px;
 }
 
-#hasilBMI, #kategoriBMI {
+#bmi-result, #bmi-category {
     text-align: center;
+    font-weight: bold;
     font-size: 30px;
     margin: 0;
 }
