@@ -1,14 +1,19 @@
+// Function Untuk Menghitung Kalkulator BMI
 function bmiCalc() {
+    // Pengambilan Nilai Dari Form
     const genderMale = document.getElementById('gender-male').checked;
     const genderFemale = document.getElementById('gender-female').checked;
     const age = parseInt(document.getElementById('age').value);
     const height = parseFloat(document.getElementById('height').value) / 100; // convert cm to m
     const weight = parseFloat(document.getElementById('weight').value);
 
+    // Validasi Input
     if ((genderMale || genderFemale) && age > 0 && weight > 0 && height > 0) {
+        // Formula Penghitungan Kalkulator BMI
         const bmi = weight / (height * height);
         const hasilBMI = bmi.toFixed(1);
 
+        // Pengkondisian Untuk Menampilkan Hasil Penghitungan Kalkulator BMI Berdasarkan Input Yang Diberikan
         let kategoriBMI, saran;
 
         if (bmi < 18.5) {
@@ -25,6 +30,7 @@ function bmiCalc() {
             desc = "BMI Anda di atas 30.0. Anda berada dalam kategori kegemukan. Disarankan untuk berkonsultasi dengan ahli gizi atau dokter.";
         }
 
+        // Method Untuk Menampilkan Hasil dari Kalkulator BMI
         document.getElementById('bmi-result').textContent = hasilBMI;
         document.getElementById('bmi-category').textContent = kategoriBMI;
         document.getElementById('desc').textContent = desc;
@@ -34,7 +40,9 @@ function bmiCalc() {
     }
 }
 
+// Function Untuk Reset Form Kalkulator BMI
 function formReset() {
+    // Method untuk reset tampilan input form dan tampilan hasil
     document.getElementById('bmi-form').reset();
     document.getElementById('result').style.display = 'none';
     document.getElementById('bmi-result').textContent = '';
