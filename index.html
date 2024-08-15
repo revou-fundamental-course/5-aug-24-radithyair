@@ -19,14 +19,23 @@
             kami dan mulai perjalanan menuju kesehatan yang lebih baik.
           </p>
         </article>
-  
         <form id="bmi-form">
+          <div class="gender-title">
+            <label for="gender-title">Jenis Kelamin</label>
+          </div>
+          
           <div class="gender">
-            <h3>Jenis Kelamin</h3>
-            <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki" /><label 
-              for="laki-laki">Laki-laki</label>
-            <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan" /><label 
-              for="perempuan">Perempuan</label>
+            <label>
+              <input type="radio" name="gender" value="laki-laki" id="gender-male">
+              <p>laki-laki</p>
+            </label>
+          </div>
+
+          <div class="gender">
+            <label>
+              <input type="radio" name="gender" value="perempuan" id="gender-female">
+              <p>perempuan</p>
+            </label>
           </div>
   
           <div class="input-data">
