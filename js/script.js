@@ -1,4 +1,4 @@
-function hitungBMI() {
+function bmiCalc() {
     const genderMale = document.getElementById('gender-male').checked;
     const genderFemale = document.getElementById('gender-female').checked;
     const age = parseInt(document.getElementById('age').value);
@@ -34,7 +34,7 @@ function hitungBMI() {
     }
 }
 
-function resetForm() {
+function formReset() {
     document.getElementById('bmi-form').reset();
     document.getElementById('result').style.display = 'none';
     document.getElementById('bmi-result').textContent = '';
